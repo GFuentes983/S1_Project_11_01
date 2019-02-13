@@ -26,4 +26,10 @@ var thisHour = thisTime.getHours();
 var thisMonth = thisTime.getMonth();
 
 //Creates a mapNum that creates a with an operator
-var mapNum = (2*thisMonth + thisHour) %24;
+var mapNum = (2 * thisMonth + thisHour) % 24;
+
+//Creates imgStr to have a value of a text string and Map
+var imgStr = Map + "<img src='sd_sky" + mapNum + ".png' />";
+
+//Places imgStr after planisphere in the HTML
+document.getElementById("planisphere").insertAdjacentHTML("afterBegin", imgStr); 
